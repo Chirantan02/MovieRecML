@@ -1,17 +1,31 @@
-
-
-
 # Mount Google Drive
-drive.mount('/content/drive')
+#drive.mount('/content/drive')
 
 # Specify the full path to the CSV file in Google Drive
-file_path = '/content/drive/MyDrive/combined_data.csv'
+#file_path = '/content/drive/MyDrive/combined_data.csv'
 
 # Load the data
-data = pd.read_csv(file_path)
+#data = pd.read_csv(file_path)
 
-drive.mount('/content/drive')
+#drive.mount('/content/drive')
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+    # To read file as bytes:
+    bytes_data = uploaded_file.getvalue()
+    st.write(bytes_data)
 
+    # To convert to a string based IO:
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    st.write(stringio)
+
+    # To read file as string:
+    string_data = stringio.read()
+    st.write(string_data)
+
+    # Can be used wherever a "file-like" object is accepted:
+    data = pd.read_csv(uploaded_file)
+    st.write(data)
+    
 ## Pre-Processing
 
 def clean_text(text):
