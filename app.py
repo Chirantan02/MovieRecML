@@ -10,11 +10,7 @@ file_path = '/content/drive/MyDrive/combined_data.csv'
 # Load the data
 data = pd.read_csv(file_path)
 
-im using googe drive for importing files. i got this erorr:  File "/mount/src/movierecml/app.py", line 10, in <module>
-
     drive.mount('/content/drive')
-
-NameError: name 'drive' is not defined
 
 ## Pre-Processing
 
@@ -105,12 +101,3 @@ for i, (title, plot, image) in recommendations.iterrows():
     # Display image using the provided link
     from IPython.display import Image, display
     display(Image(url=image))
-
-
-
-
-
-
-
-
-Sample query: person starts a company and gets rich
