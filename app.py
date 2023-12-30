@@ -6,14 +6,11 @@ st.write("Installing dependencies...")
 subprocess.run(["pip", "install", "-U", "sentence_transformers"])
 # Add any other dependencies you might need
 
-# Mount Google Drive
-drive.mount('/content/drive')
+# Specify the URL of the CSV file
+file_url = 'https://drive.google.com/file/d/1vs1o2PbEFF50CaaQ3u9iepS4SJrWhO0X/view?usp=sharing'
 
-# Specify the full path to the CSV file in Google Drive
-file_path = '/content/drive/MyDrive/combined_data.csv'
-
-# Load the data
-data = pd.read_csv(file_path)
+# Load the data directly from the URL
+data = pd.read_csv(file_url)
 
 # Pre-Processing
 def clean_text(text):
