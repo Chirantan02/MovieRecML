@@ -97,7 +97,7 @@
     {
       "cell_type": "markdown",
       "source": [
-        "# Model 1 - all-mpnet-base-v2"
+        "# Model 1 - stsb-distilbert-base"
       ],
       "metadata": {
         "id": "EgV0m5FftxA3"
