@@ -1,9 +1,10 @@
-# Install necessary dependencies
-st.write("Installing dependencies...")
-subprocess.run(["pip", "install", "-U", "sentence_transformers"])
+
 
 import subprocess
 import streamlit as st
+# Install necessary dependencies
+st.write("Installing dependencies...")
+subprocess.run(["pip", "install", "-U", "sentence_transformers"])
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
 from google.colab import drive
