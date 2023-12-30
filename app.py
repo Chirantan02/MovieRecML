@@ -1,5 +1,6 @@
 import subprocess
 import streamlit as st
+import pandas as pd
 
 # Install necessary dependencies
 st.write("Installing dependencies...")
