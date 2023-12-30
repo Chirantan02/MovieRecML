@@ -7,7 +7,7 @@ subprocess.run(["pip", "install", "-U", "sentence_transformers"])
 # Add any other dependencies you might need
 
 # Now you can import the required libraries
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformers
 # Import other necessary libraries
 
 # Requirements
