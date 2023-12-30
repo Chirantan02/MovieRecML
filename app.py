@@ -6,16 +6,6 @@ st.write("Installing dependencies...")
 subprocess.run(["pip", "install", "-U", "sentence_transformers"])
 # Add any other dependencies you might need
 
-# Import other necessary libraries
-
-# Requirements
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.preprocessing import normalize
-from google.colab import drive
-from tqdm.notebook import tqdm
-import pandas as pd
-import re
-
 # Mount Google Drive
 drive.mount('/content/drive')
 
