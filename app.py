@@ -6,7 +6,10 @@
 
 # Load the data
 #data = pd.read_csv(file_path)
-
+if 'streamlit' not in st.__file__:
+    # If not running in Streamlit, assume it's a Colab notebook
+    drive.mount('/content/drive')
+    
 #drive.mount('/content/drive')
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
