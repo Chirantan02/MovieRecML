@@ -1,14 +1,14 @@
-pip install -r requirements.txt
-
 # app.py
+
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import normalize
 import pandas as pd
 import re
-from IPython.display import Image, display
 
-# Load data
-data = pd.read_csv('https://drive.google.com/file/d/1vs1o2PbEFF50CaaQ3u9iepS4SJrWhO0X/view?usp=sharing')
+# Load the data directly from the URL
+file_url = 'https://drive.google.com/uc?id=1vs1o2PbEFF50CaaQ3u9iepS4SJrWhO0X'
+data = pd.read_csv(file_url)
 
 # Pre-Processing
 def clean_text(text):
@@ -19,7 +19,8 @@ def clean_text(text):
     # ... Add other cleaning steps as needed ...
     return text
 
-# Model - stsb-distilbert-base
+# Model 1 - all-mpnet-base-v2
+# Load a different sentence embedding model
 model = SentenceTransformer('all-mpnet-base-v2')
 
 # Encode plot descriptions to vectors
@@ -64,4 +65,7 @@ recommendations = recommend_movies(user_input)
 print("\nRecommended Movies:")
 for i, (title, plot, image) in recommendations.iterrows():
     print(f"\nTitle: {title}\nPlot: {plot}\nImage: {image}\n")
+
+    # Display image using the provided link
+    from IPython.display import Image, display
     display(Image(url=image))
