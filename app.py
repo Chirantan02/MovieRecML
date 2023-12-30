@@ -1,3 +1,5 @@
+pip install -r requirements.txt
+
 # app.py
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
