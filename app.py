@@ -1,7 +1,7 @@
 import subprocess
 import streamlit as st
-import cosine_similarity
-import normalize
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import normalize
 from google.colab import drive
 from tqdm.notebook import tqdm
 from tqdm import tqdm
