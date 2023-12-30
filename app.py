@@ -2,7 +2,7 @@ import streamlit as st
 
 # Install necessary dependencies
 st.write("Installing dependencies...")
-!pip install -U sentence_transformers
+pip install -U sentence_transformers
 # Add any other dependencies you might need
 
 # Now you can import the required libraries
