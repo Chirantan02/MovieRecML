@@ -1,5 +1,15 @@
-# Requirements
+import streamlit as st
+
+# Install necessary dependencies
+st.write("Installing dependencies...")
+!pip install -U sentence_transformers
+# Add any other dependencies you might need
+
+# Now you can import the required libraries
 from sentence_transformers import SentenceTransformer
+# Import other necessary libraries
+
+# Requirements
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
 from google.colab import drive
