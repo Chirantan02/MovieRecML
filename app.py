@@ -1,3 +1,7 @@
+# Install necessary dependencies
+st.write("Installing dependencies...")
+subprocess.run(["pip", "install", "-U", "sentence_transformers"])
+
 import subprocess
 import streamlit as st
 from sklearn.metrics.pairwise import cosine_similarity
@@ -7,11 +11,6 @@ from tqdm.notebook import tqdm
 from tqdm import tqdm
 import pandas as pd
 import re
-
-# Install necessary dependencies
-st.write("Installing dependencies...")
-subprocess.run(["pip", "install", "-U", "sentence_transformers"])
-# Add any other dependencies you might need
 
 # Specify the URL of the CSV file
 file_url = 'https://drive.google.com/file/d/1vs1o2PbEFF50CaaQ3u9iepS4SJrWhO0X/view?usp=sharing'
