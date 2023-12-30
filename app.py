@@ -1,5 +1,4 @@
 # Requirements
-pip install -U sentence_transformer
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
