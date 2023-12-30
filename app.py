@@ -10,7 +10,7 @@ file_path = '/content/drive/MyDrive/combined_data.csv'
 # Load the data
 data = pd.read_csv(file_path)
 
-    drive.mount('/content/drive')
+drive.mount('/content/drive')
 
 ## Pre-Processing
 
