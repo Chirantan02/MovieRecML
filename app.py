@@ -1,6 +1,6 @@
 import subprocess
 import streamlit as st
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformers
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
 from google.colab import drive
